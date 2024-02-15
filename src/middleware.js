@@ -1,3 +1,4 @@
+
 const { NextRequest, NextResponse } = require('next/server');
 const { analytics } = require('./utils/analytics');
 
@@ -17,8 +18,10 @@ async function middleware(req) {
   return NextResponse.next();
 }
 
-module.exports = middleware;
-
-module.exports.matcher = {
+middleware.matcher = {
   matcher: ['/'],
 };
+
+module.exports = { middleware };
+
+
