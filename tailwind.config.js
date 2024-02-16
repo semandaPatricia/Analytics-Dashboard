@@ -139,4 +139,4 @@ module.exports = {
     ]),
   ],
   plugins: [require("@headlessui/tailwindcss")],
-};
+};6 

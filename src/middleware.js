@@ -7,10 +7,8 @@ async function middleware(req) {
     try {
       analytics.track('pageview', {
         page: '/',
-        country: req.geo?.country,
       });
-    } catch (err) {
-      // fail silently to not affect request
+    } catch (err) {  
       console.error(err);
     }
   }
